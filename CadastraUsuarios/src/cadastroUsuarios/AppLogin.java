@@ -1,4 +1,3 @@
-
 package cadastroUsuarios;
 import Utils.ValidInputVerifier;
 import java.sql.*;
@@ -173,10 +172,14 @@ public class AppLogin extends javax.swing.JFrame {
                 else{
                     String s = rs.getString("admin");
                     if(isAdmin(s)){
+                        AdminRegister adminTab = new AdminRegister();
+                        adminTab.setVisible(true);
                     }
                     else{
-                        
+                        DefaultUserRegister userTab = new DefaultUserRegister();
+                        userTab.setVisible(true);
                     }
+                    this.setVisible(false);
                 }
                 stmt.close();
             } catch (SQLException e) {
@@ -189,5 +192,4 @@ public class AppLogin extends javax.swing.JFrame {
     boolean isAdmin(String s){
             return s.equals("T");
         }
-    
 }

@@ -51,7 +51,7 @@ public class AdminRegister extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         comboBox = new javax.swing.JComboBox<>();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        buttonAddUser = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -79,7 +79,7 @@ public class AdminRegister extends javax.swing.JFrame {
         });
 
         button.setBackground(new java.awt.Color(204, 255, 204));
-        button.setText("Add Admin");
+        button.setText("Add as Admin");
         button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonActionPerformed(evt);
@@ -99,10 +99,11 @@ public class AdminRegister extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton1.setText("jToggleButton1");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonAddUser.setBackground(new java.awt.Color(204, 255, 204));
+        buttonAddUser.setText("Add as User");
+        buttonAddUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                buttonAddUserActionPerformed(evt);
             }
         });
 
@@ -128,7 +129,7 @@ public class AdminRegister extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(comboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(buttonAddUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(13, 13, 13))))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -143,13 +144,13 @@ public class AdminRegister extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(inputName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton1))
+                    .addComponent(button))
                 .addGap(3, 3, 3)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(button)
-                    .addComponent(inputPass, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(inputPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonAddUser))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -171,9 +172,15 @@ public class AdminRegister extends javax.swing.JFrame {
         atualizaTabela();
     }//GEN-LAST:event_comboBoxActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    private void buttonAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddUserActionPerformed
+        if (!validInput()) {
+            JOptionPane.showMessageDialog(null, "One or more invalid entrys");
+        }
+        else{
+        cadastraUsuario("F");
+        atualizaTabela();
+        }
+    }//GEN-LAST:event_buttonAddUserActionPerformed
 
     private void inputNameActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_inputNameActionPerformed
         // TODO add your handling code here:
@@ -188,7 +195,7 @@ public class AdminRegister extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "One or more invalid entrys");
         }
         else{
-        cadastraUsuario();
+        cadastraUsuario("T");
         atualizaTabela();
         }
         
@@ -242,6 +249,7 @@ public class AdminRegister extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton button;
+    private javax.swing.JButton buttonAddUser;
     private javax.swing.JComboBox<String> comboBox;
     private javax.swing.JTextField inputName;
     private javax.swing.JTextField inputNick;
@@ -250,11 +258,10 @@ public class AdminRegister extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTable tabela;
     // End of variables declaration//GEN-END:variables
 
-    private void cadastraUsuario() {
+    private void cadastraUsuario(String s) {
 
         try {
             Statement stmt = con.createStatement();
@@ -262,10 +269,10 @@ public class AdminRegister extends javax.swing.JFrame {
             String password = inputPass.getText();
             String nickname = inputNick.getText();
             String operation = "Insert into users values('" + name + "','" + password + "','" + nickname
-                    + "',999999,'T');";
+                    + "',"+defaultBalance(s)+",'"+s+"');";
             stmt.execute(operation);
             stmt.close();
-            JOptionPane.showMessageDialog(null, "Admistrador "+ name+ " adicionado ao sistema!");
+            JOptionPane.showMessageDialog(null, userType(s)+" "+ name+ " adicionado ao sistema!");
             clearAllInputs();
             
         } catch (SQLException ex) {
@@ -324,4 +331,14 @@ public class AdminRegister extends javax.swing.JFrame {
             Logger.getLogger(AdminRegister.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    String userType(String s){
+        if(s.equals("T")) return "Adminstrador";
+        return "Usuário";
+    }
+    
+    int defaultBalance(String s){
+        if(s.equals("T"))return 999999;
+        return 0;
+}
 }
