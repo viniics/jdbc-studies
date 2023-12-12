@@ -38,7 +38,8 @@ public class AdminRegister extends javax.swing.JFrame {
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -57,13 +58,12 @@ public class AdminRegister extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
 
         tabela.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                new Object[][] {
 
-            },
-            new String [] {
-                "User", "Password", "Nickname", "Balance", "isAdmin"
-            }
-        ));
+                },
+                new String[] {
+                        "User", "Password", "Nickname", "Balance", "isAdmin"
+                }));
         jScrollPane1.setViewportView(tabela);
 
         inputName.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +92,8 @@ public class AdminRegister extends javax.swing.JFrame {
 
         jLabel3.setText("Insert Nickname");
 
-        comboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ordenar por adminstrador", "Ordenar por usuario", "Sem ordenar" }));
+        comboBox.setModel(new javax.swing.DefaultComboBoxModel<>(
+                new String[] { "Ordenar por adminstrador", "Ordenar por usuario", "Sem ordenar" }));
         comboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboBoxActionPerformed(evt);
@@ -110,77 +111,97 @@ public class AdminRegister extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(inputName)
-                                .addComponent(inputPass, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
-                                .addComponent(inputNick))
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(buttonAddUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(13, 13, 13))))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel1)
+                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout
+                                                                .createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING,
+                                                                        false)
+                                                                .addComponent(inputName)
+                                                                .addComponent(inputPass,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE, 259,
+                                                                        Short.MAX_VALUE)
+                                                                .addComponent(inputNick))
+                                                        .addComponent(jLabel2)
+                                                        .addComponent(jLabel3))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        134, Short.MAX_VALUE)
+                                                .addGroup(layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                                                false)
+                                                        .addComponent(button, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(comboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                Short.MAX_VALUE)
+                                                        .addComponent(buttonAddUser,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(13, 13, 13))))
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 605, Short.MAX_VALUE)
+                                .addContainerGap()));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button))
-                .addGap(3, 3, 3)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(inputPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonAddUser))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
-                        .addGap(7, 7, 7)
-                        .addComponent(inputNick, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(comboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(inputName, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(button))
+                                .addGap(3, 3, 3)
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(inputPass, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(buttonAddUser))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel3)
+                                                .addGap(7, 7, 7)
+                                                .addComponent(inputNick, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addComponent(comboBox, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17,
+                                        Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void comboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxActionPerformed
+    private void comboBoxActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_comboBoxActionPerformed
         selectedSort = comboBox.getSelectedIndex();
         atualizaTabela();
-    }//GEN-LAST:event_comboBoxActionPerformed
+    }// GEN-LAST:event_comboBoxActionPerformed
 
-    private void buttonAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAddUserActionPerformed
+    private void buttonAddUserActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_buttonAddUserActionPerformed
         if (!validInput()) {
             JOptionPane.showMessageDialog(null, "One or more invalid entrys");
+        } else {
+            cadastraUsuario("F");
+            atualizaTabela();
         }
-        else{
-        cadastraUsuario("F");
-        atualizaTabela();
-        }
-    }//GEN-LAST:event_buttonAddUserActionPerformed
+    }// GEN-LAST:event_buttonAddUserActionPerformed
 
     private void inputNameActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_inputNameActionPerformed
         // TODO add your handling code here:
@@ -193,13 +214,10 @@ public class AdminRegister extends javax.swing.JFrame {
     private void buttonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_buttonActionPerformed
         if (!validInput()) {
             JOptionPane.showMessageDialog(null, "One or more invalid entrys");
+        } else {
+            cadastraUsuario("T");
+            atualizaTabela();
         }
-        else{
-        cadastraUsuario("T");
-        atualizaTabela();
-        }
-        
-        
 
     }// GEN-LAST:event_buttonActionPerformed
 
@@ -268,13 +286,15 @@ public class AdminRegister extends javax.swing.JFrame {
             String name = inputName.getText();
             String password = inputPass.getText();
             String nickname = inputNick.getText();
-            String operation = "Insert into users values('" + name + "','" + password + "','" + nickname
-                    + "',"+defaultBalance(s)+",'"+s+"');";
-            stmt.execute(operation);
-            stmt.close();
-            JOptionPane.showMessageDialog(null, userType(s)+" "+ name+ " adicionado ao sistema!");
-            clearAllInputs();
-            
+            if (!alreadyRegistered()) {
+                String operation = "Insert into users values('" + name + "','" + password + "','" + nickname
+                        + "'," + defaultBalance(s) + ",'" + s + "');";
+                stmt.execute(operation);
+                stmt.close();
+                JOptionPane.showMessageDialog(null, userType(s) + " " + name + " adicionado ao sistema!");
+                clearAllInputs();
+            }
+
         } catch (SQLException ex) {
             Logger.getLogger(AdminRegister.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -292,27 +312,25 @@ public class AdminRegister extends javax.swing.JFrame {
                 && inputPass.getText() != null && !inputPass.getText().equals("")
                 && inputNick.getText() != null && !inputNick.getText().equals("");
     }
-    
-    
-    private String queryResult(int i){
-        if(i==0){
+
+    private String queryResult(int i) {
+        if (i == 0) {
             return ("Select * from users order by admin desc, balance desc;");
-        }
-        else if (i==1){
+        } else if (i == 1) {
             return ("Select * from users order by admin, balance desc;");
         }
         return ("Select * from users");
-        
+
     }
-    
-    
-    void atualizaTabela(){
+
+    void atualizaTabela() {
         DefaultTableModel table = (DefaultTableModel) tabela.getModel();
-        //Limpando a tabela antes de adicionar qualquer coisa
+        // Limpando a tabela antes de adicionar qualquer coisa
         int rowCount = table.getRowCount();
         for (int i = rowCount - 1; i >= 0; i--) {
-            table.removeRow(i);}
-        
+            table.removeRow(i);
+        }
+
         try {
             Statement stmt = con.createStatement();
             ResultSet resultTable = stmt.executeQuery(queryResult(selectedSort));
@@ -323,7 +341,7 @@ public class AdminRegister extends javax.swing.JFrame {
                 String userNick = resultTable.getString("nickname");
                 String userBalance = resultTable.getString("balance");
                 String isAdmin = resultTable.getString("admin");
-                table.addRow(new Object[] { userLogin, userPass, userNick, userBalance, isAdmin});
+                table.addRow(new Object[] { userLogin, userPass, userNick, userBalance, isAdmin });
             }
 
             stmt.close();
@@ -331,14 +349,32 @@ public class AdminRegister extends javax.swing.JFrame {
             Logger.getLogger(AdminRegister.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    String userType(String s){
-        if(s.equals("T")) return "Adminstrador";
+
+    String userType(String s) {
+        if (s.equals("T"))
+            return "Adminstrador";
         return "Usuário";
     }
-    
-    int defaultBalance(String s){
-        if(s.equals("T"))return 999999;
+
+    int defaultBalance(String s) {
+        if (s.equals("T"))
+            return 999999;
         return 0;
-}
+    }
+
+    boolean alreadyRegistered() {
+        try {
+            Statement stmt = con.createStatement();
+            String name = inputName.getText();
+            String op = ("Select * from users where userlogin ='" + name + "';");
+            ResultSet rs = stmt.executeQuery(op);
+            if (rs.next()) {
+                JOptionPane.showMessageDialog(null, "Já existe um usuário cadastrado com esse nome");
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
