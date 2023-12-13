@@ -26,7 +26,7 @@ public class AniversariantesDoMes {
         }
     }
 
-    public ResultSet query(String operation){
+    public void query(String operation){
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(operation);
             while (rs.next()) {
@@ -37,10 +37,8 @@ public class AniversariantesDoMes {
                 System.out.print(rs.getString("Dia do Aniversario"));
                 System.out.print("\n");
             }
-            return rs;
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
     }
 }
