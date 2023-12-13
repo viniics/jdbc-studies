@@ -7,6 +7,6 @@ Funcionamento do aplicativo: ao iniciar o Main, o usuario será questionado se d
 Com base na reposta, o sistema executa a query apropriada.
 
 ToDo:
-- O sysout do RS.Next() está numa classe indevida, porem fazer um return de "ResultSet" causa uma SqlException, então o primeiro commit vai ser com o print na classe "AniversariantesDoMes"
+- O sysout do RS.Next() está numa classe indevida, porem fazer um return de "ResultSet" causa uma SqlException, então o primeiro commit vai ser com o print na classe "AniversariantesDoMes enquanto trabalho numa solução"
 - Classe para preencher aleatoriamente o DB com nomes aleatorios e obter uma melhor variedade de respostas.
 - Formatar melhor a saída final
