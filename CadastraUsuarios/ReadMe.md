@@ -13,3 +13,6 @@ Algumas funções do aplicativo:
 - Impede o cadastro quando algum dos campos necessários se encontra vazio / nulo.
 - Possibilita ao adminstrador visualizar a tabela de usuários atraves de diferentes ordenações.
 - Na página inicial, caso as entradas sejam inválidas, informa ao usuário que não há nenhum cadastro que satisfaça as informações preenchidas.
+
+
+Vídeo de demonstração: [![Watch the video](https://img.youtube.com/vi/W39lVCodKzg/maxresdefault.jpg)](https://www.youtube.com/watch?v=W39lVCodKzg)
